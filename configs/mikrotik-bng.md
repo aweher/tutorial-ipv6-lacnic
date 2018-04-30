@@ -5,7 +5,6 @@ add name=PPPoEv4 ranges=100.64.8.0/22
 /ipv6 pool
 add name=PPPoEv6-PD prefix=2001:db8:8000::/33 prefix-length=48
 /ppp profile
-set *0 remote-address=PPPoEv4
 add change-tcp-mss=yes dhcpv6-pd-pool=PPPoEv6-PD dns-server=8.8.8.8,9.9.9.9 local-address=100.64.0.1 \
     name=PPPoEv6 only-one=no remote-address=PPPoEv4 use-compression=no use-encryption=no use-mpls=no \
     use-upnp=no wins-server=127.0.0.1
